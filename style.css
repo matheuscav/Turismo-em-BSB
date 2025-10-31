@@ -42,3 +42,21 @@ gap: 16px;
     content: "";
     width: 350px;
 }
+.menu {
+    padding: 10px 0;
+}
+
+.menu a {
+    color: #fff; /* Cor do texto */
+    text-decoration: none; /* Tira o sublinhado */
+    font-size: 18px; /* Tamanho da fonte maior */
+    margin: 0 15px; /* Espaçamento entre os links */
+    padding: 8px 12px;
+    border-radius: 5px;
+    transition: background-color 0.3s; /* Efeito suave ao passar o mouse */
+}
+
+.menu a:hover {
+    background-color: #fdb347; /* Cor da borda do header para destaque */
+    color: #0a0a23; /* Cor do fundo do header */
+}

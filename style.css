@@ -194,6 +194,9 @@ body {
     margin-top: 40px;
 }
 @media (max-width: 768px) {
+    .cabeçalho {
+        padding: 20px;
+    }
     .cabeçalho h1 {
         font-size: 1.2rem;
         margin: 0 auto;
@@ -208,9 +211,14 @@ body {
         width: 70%;
         height: 100vh;
         background-color: var(--cor-principal);
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
+        
+        /* --- A MÁGICA ESTÁ AQUI --- */
+        display: flex; /* Garante que é um container flex */
+        flex-direction: column; /* FORÇA os itens a ficarem em coluna */
+        justify-content: center; /* Centraliza a coluna verticalmente */
+        align-items: center; /* Centraliza os itens na horizontal */
+        /* --- FIM DA CORREÇÃO --- */
+
         gap: 20px;
         transition: transform 0.3s ease-in-out;
         transform: translateX(-100%);

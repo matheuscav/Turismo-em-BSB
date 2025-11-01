@@ -1,89 +1,90 @@
+:root {
+    --cor-principal: #0a0a23;
+    --cor-destaque: #fdb347;
+    --cor-texto: #333;
+    --cor-fundo: #f5f6f7;
+}
 
 * {
     box-sizing: border-box;
 }
 
-.galeria img {
-    width: 100%;
-    max-width: 350px;
-    height: 300px;
-    object-fit: cover;
-    border-radius: 10px;
+html {
+    font-size: 16px;
+    scroll-behavior: smooth;
 }
 
 body {
     margin: 0;
     font-family: sans-serif;
-    background-color: #f5f6f7;
+    background-color: var(--cor-fundo);
+    color: var(--cor-texto);
 }
 
 .cabeçalho {
-text-align: center;
-text-transform: uppercase;
-padding: 32px;
-background-color: #0a0a23;
-color: #fff;
-border-bottom: 4px solid #fdb347;
+    text-align: center;
+    text-transform: uppercase;
+    padding: 32px;
+    background-color: var(--cor-principal);
+    color: #fff;
+    border-bottom: 4px solid var(--cor-destaque);
 }
 
-.galeria {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    padding: 20px 10px;
-    max-width: 1400px;
-    margin: 0 auto;
-gap: 16px;
-}
-
-.galeira::after {
-    content: "";
-    width: 350px;
-}
 .menu {
     padding: 10px 0;
 }
 
 .menu a {
-    color: #fff; /* Cor do texto */
-    text-decoration: none; /* Tira o sublinhado */
-    font-size: 18px; /* Tamanho da fonte maior */
-    margin: 0 15px; /* Espaçamento entre os links */
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+    margin: 0 15px;
     padding: 8px 12px;
     border-radius: 5px;
-    transition: background-color 0.3s; /* Efeito suave ao passar o mouse */
+    transition: background-color 0.3s;
 }
 
 .menu a:hover {
-    background-color: #fdb347; /* Cor da borda do header para destaque */
-    color: #0a0a23; /* Cor do fundo do header */
+    background-color: var(--cor-destaque);
+    color: var(--cor-principal);
 }
-/* Estilos para as imagens de destaque na página inicial */
+
+.container {
+    max-width: 900px;
+    margin: 30px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+.container h2 {
+    color: var(--cor-principal);
+}
+
 .destaques {
-    display: flex; /* Coloca as imagens lado a lado */
-    justify-content: space-between; /* Espaçamento entre elas */
-    gap: 15px; /* Espaço entre as imagens */
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
     margin: 30px 0;
 }
 
 .destaques img {
-    width: 32%; /* Divide o espaço para 3 imagens */
+    width: 32%;
     border-radius: 10px;
     object-fit: cover;
     height: 200px;
 }
 
-/* Estilo para o botão de ação */
 .botao-acao {
-    display: inline-block; /* Permite definir padding e margin */
+    display: inline-block;
     text-align: center;
     width: 100%;
     padding: 15px;
     margin-top: 20px;
-    background-color: #fdb347; /* Cor de destaque laranja */
-    color: #0a0a23; /* Cor escura */
+    background-color: var(--cor-destaque);
+    color: var(--cor-principal);
     border: none;
     border-radius: 5px;
     font-size: 18px;
@@ -95,8 +96,33 @@ gap: 16px;
 }
 
 .botao-acao:hover {
-    background-color: #0a0a23;
+    background-color: var(--cor-principal);
     color: #fff;
+}
+
+.galeria {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 10px;
+    max-width: 1400px;
+    margin: 0 auto;
+    gap: 16px;
+}
+
+.galeria img {
+    width: 100%;
+    max-width: 350px;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.galeria::after {
+    content: "";
+    width: 350px;
 }
 
 .formulario label {
@@ -124,13 +150,12 @@ gap: 16px;
     display: inline-block;
 }
 
-
 .formulario button {
     display: block;
     width: 100%;
     padding: 15px;
     margin-top: 20px;
-    background-color: #0a0a23;
+    background-color: var(--cor-principal);
     color: #fff;
     border: none;
     border-radius: 5px;
@@ -140,6 +165,67 @@ gap: 16px;
 }
 
 .formulario button:hover {
-    background-color: #fdb347;
-    color: #0a0a23;
+    background-color: var(--cor-destaque);
+    color: var(--cor-principal);
+}
+
+.rodape {
+    text-align: center;
+    padding: 20px;
+    background-color: var(--cor-principal);
+    color: white;
+    font-size: 0.9rem;
+    margin-top: 40px;
+}
+
+@media (max-width: 768px) {
+    .cabeçalho h1 {
+        font-size: 1.5rem;
+    }
+
+    .menu {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .menu a {
+        width: 80%;
+        text-align: center;
+    }
+
+    .container {
+        padding: 15px;
+    }
+
+    .container h2 {
+        font-size: 1.4rem;
+    }
+    
+    body, .container {
+        font-size: 1rem;
+    }
+
+    .destaques {
+        flex-direction: column;
+    }
+
+    .destaques img {
+        width: 100%;
+        height: 250px;
+    }
+
+    .galeria {
+        padding: 10px;
+        gap: 10px;
+    }
+
+    .galeria img {
+        max-width: 100%;
+    }
+
+    .formulario button {
+        font-size: 1rem;
+    }
 }

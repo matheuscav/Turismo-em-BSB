@@ -1,28 +1,32 @@
-const galeriaImagens = document.querySelectorAll('.galeria img');
-const overlay = document.querySelector('.overlay');
-const overlayImagem = document.getElementById('overlay-imagem');
-const menuHamburguer = document.getElementById('menu-hamburguer');
-const menuNavegacao = document.getElementById('menu-navegacao');
+document.addEventListener('DOMContentLoaded', function() {
 
-function abrirImagem(event) {
-    const imagemClicadaSrc = event.target.src;
-    overlayImagem.src = imagemClicadaSrc;
-    overlay.style.display = 'flex';
-}
+    const menuHamburguer = document.getElementById('menu-hamburguer');
+    const menuNavegacao = document.getElementById('menu-navegacao');
 
-function fecharImagem() {
-    overlay.style.display = 'none';
-}
+    if (menuHamburguer && menuNavegacao) {
+        menuHamburguer.addEventListener('click', () => {
+            menuNavegacao.classList.toggle('aberto');
+        });
+    }
 
-if (galeriaImagens.length > 0) {
-    galeriaImagens.forEach(imagem => {
-        imagem.addEventListener('click', abrirImagem);
-    });
-    overlay.addEventListener('click', fecharImagem);
-}
+    const galeriaImagens = document.querySelectorAll('.galeria img');
+    const overlay = document.querySelector('.overlay');
+    const overlayImagem = document.getElementById('overlay-imagem');
 
-if (menuHamburguer) {
-    menuHamburguer.addEventListener('click', () => {
-        menuNavegacao.classList.toggle('aberto');
-    });
-}
+    function abrirImagem(event) {
+        const imagemClicadaSrc = event.target.src;
+        overlayImagem.src = imagemClicadaSrc;
+        overlay.style.display = 'flex';
+    }
+
+    function fecharImagem() {
+        overlay.style.display = 'none';
+    }
+
+    if (galeriaImagens.length > 0 && overlay && overlayImagem) {
+        galeriaImagens.forEach(imagem => {
+            imagem.addEventListener('click', abrirImagem);
+        });
+        overlay.addEventListener('click', fecharImagem);
+    }
+});

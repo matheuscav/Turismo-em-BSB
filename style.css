@@ -4,35 +4,33 @@
     --cor-texto: #333;
     --cor-fundo: #f5f6f7;
 }
-
 * {
     box-sizing: border-box;
 }
-
 html {
     font-size: 16px;
     scroll-behavior: smooth;
 }
-
 body {
     margin: 0;
     font-family: sans-serif;
     background-color: var(--cor-fundo);
     color: var(--cor-texto);
 }
-
 .cabeçalho {
-    text-align: center;
-    padding: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    text-transform: uppercase;
+    padding: 20px;
     background-color: var(--cor-principal);
     color: #fff;
     border-bottom: 4px solid var(--cor-destaque);
 }
-
 .menu {
     padding: 10px 0;
 }
-
 .menu a {
     color: #fff;
     text-decoration: none;
@@ -42,23 +40,20 @@ body {
     border-radius: 5px;
     transition: background-color 0.3s;
 }
-
 .menu a:hover {
     background-color: var(--cor-destaque);
     color: var(--cor-principal);
 }
-
 .menu-hamburguer {
     display: none;
     background: none;
     border: none;
     cursor: pointer;
     position: absolute;
-    top: 35px;
+    top: 25px;
     right: 20px;
     z-index: 1001;
 }
-
 .container {
     max-width: 900px;
     margin: 30px auto;
@@ -69,25 +64,21 @@ body {
     line-height: 1.6;
     width: 95%;
 }
-
 .container h2 {
     color: var(--cor-principal);
 }
-
 .destaques {
     display: flex;
     justify-content: space-between;
     gap: 15px;
     margin: 30px 0;
 }
-
 .destaques img {
     width: 32%;
     border-radius: 10px;
     object-fit: cover;
     height: 200px;
 }
-
 .botao-acao {
     display: block;
     text-align: center;
@@ -100,17 +91,16 @@ body {
     border: none;
     border-radius: 5px;
     font-size: 18px;
+    text-transform: uppercase;
     text-decoration: none;
     font-weight: bold;
     cursor: pointer;
     transition: background-color 0.3s;
 }
-
 .botao-acao:hover {
     background-color: var(--cor-principal);
     color: #fff;
 }
-
 .galeria {
     display: flex;
     flex-direction: row;
@@ -122,7 +112,6 @@ body {
     margin: 0 auto;
     gap: 16px;
 }
-
 .galeria img {
     width: 100%;
     max-width: 350px;
@@ -132,17 +121,14 @@ body {
     cursor: pointer;
     transition: transform 0.3s ease-in-out;
 }
-
 .galeria img:hover {
     transform: scale(1.05);
     box-shadow: 0 8px 15px rgba(0,0,0,0.2);
 }
-
 .galeria::after {
     content: "";
     width: 350px;
 }
-
 .overlay {
     position: fixed;
     top: 0;
@@ -155,19 +141,16 @@ body {
     align-items: center;
     z-index: 1000;
 }
-
 .overlay img {
     max-width: 90%;
     max-height: 90%;
     border-radius: 5px;
 }
-
 .formulario label {
     display: block;
     margin-top: 20px;
     font-weight: bold;
 }
-
 .formulario input[type="text"],
 .formulario textarea {
     width: 100%;
@@ -177,16 +160,13 @@ body {
     border-radius: 5px;
     font-size: 16px;
 }
-
 .formulario .opcoes {
     margin-top: 10px;
 }
-
 .formulario .opcoes label {
     font-weight: normal;
     display: inline-block;
 }
-
 .formulario button {
     display: block;
     max-width: 400px;
@@ -198,14 +178,13 @@ body {
     border: none;
     border-radius: 5px;
     font-size: 18px;
+    text-transform: uppercase;
     cursor: pointer;
 }
-
 .formulario button:hover {
     background-color: var(--cor-destaque);
     color: var(--cor-principal);
 }
-
 .rodape {
     text-align: center;
     padding: 20px;
@@ -214,20 +193,14 @@ body {
     font-size: 0.9rem;
     margin-top: 40px;
 }
-
 @media (max-width: 768px) {
-    .cabeçalho {
-        padding: 20px;
-    }
-
     .cabeçalho h1 {
         font-size: 1.2rem;
+        margin: 0 auto;
     }
-
     .menu-hamburguer {
         display: block;
     }
-
     .menu {
         position: fixed;
         top: 0;
@@ -244,48 +217,38 @@ body {
         padding: 0;
         z-index: 1000;
     }
-    
     .menu.aberto {
         transform: translateX(0);
     }
-
     .menu a {
         font-size: 1.2rem;
         width: 100%;
         text-align: center;
         padding: 15px;
     }
-
     .container {
         padding: 15px;
     }
-
     .container h2 {
         font-size: 1.4rem;
     }
-    
     body, .container {
         font-size: 1rem;
     }
-
     .destaques {
         flex-direction: column;
     }
-
     .destaques img {
         width: 100%;
         height: 250px;
     }
-
     .galeria {
         padding: 10px;
         gap: 10px;
     }
-
     .galeria img {
         max-width: 100%;
     }
-
     .formulario button {
         font-size: 1rem;
     }

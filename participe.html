@@ -4,18 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <title>Turismo em Brasília para 60+</title>
+    <title>Participe | Turismo em Brasília 60+</title>
 </head>
 <body>
-
     <header class="cabeçalho">
-        <h1>Faça parte da nossa pesquisa</h1>
-        
+        <h1>TURISMO EM BRASÍLIA PARA 60+</h1>
         <button class="menu-hamburguer" id="menu-hamburguer">
             <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
         </button>
-
-        <nav class="menu">
+        <nav class="menu" id="menu-navegacao">
             <a href="index.html">Início</a>
             <a href="galeria.html">Galeria de Fotos</a>
             <a href="participe.html">Participe</a>
@@ -27,6 +24,7 @@
         <p>Sua opinião é muito importante para criarmos roteiros e atividades que você realmente goste. Por favor, responda às perguntas abaixo.</p>
 
         <form action="URL_DO_SEU_FORMSPREE" method="POST" class="formulario">
+            <input type="hidden" name="_next" value="obrigado.html">
             <label for="nome">Seu nome (opcional):</label>
             <input type="text" id="nome" name="nome">
 
@@ -46,5 +44,11 @@
             <button type="submit">Enviar Resposta</button>
         </form>
     </main>
+
+    <footer class="rodape">
+        <p>&copy; 2025 - Projeto Turismo em Brasília 60+ | Projeto Comunitário</p>
+    </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>

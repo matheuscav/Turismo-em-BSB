@@ -49,6 +49,17 @@ body {
     color: var(--cor-principal);
 }
 
+.menu-hamburguer {
+    display: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+    position: absolute;
+    top: 35px;
+    right: 20px;
+    z-index: 1001;
+}
+
 .container {
     max-width: 900px;
     margin: 30px auto;
@@ -90,6 +101,7 @@ body {
     border: none;
     border-radius: 5px;
     font-size: 18px;
+    text-transform: uppercase;
     text-decoration: none;
     font-weight: bold;
     cursor: pointer;
@@ -207,20 +219,44 @@ body {
 }
 
 @media (max-width: 768px) {
+    .cabeçalho {
+        padding: 20px;
+    }
+
     .cabeçalho h1 {
-        font-size: 1.5rem;
+        font-size: 1.2rem;
+    }
+
+    .menu-hamburguer {
+        display: block;
     }
 
     .menu {
-        display: flex;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 70%;
+        height: 100vh;
+        background-color: var(--cor-principal);
         flex-direction: column;
+        justify-content: center;
         align-items: center;
-        gap: 10px;
+        gap: 20px;
+        transition: transform 0.3s ease-in-out;
+        transform: translateX(-100%);
+        padding: 0;
+        z-index: 1000;
+    }
+    
+    .menu.aberto {
+        transform: translateX(0);
     }
 
     .menu a {
-        width: 80%;
+        font-size: 1.2rem;
+        width: 100%;
         text-align: center;
+        padding: 15px;
     }
 
     .container {
@@ -256,14 +292,4 @@ body {
     .formulario button {
         font-size: 1rem;
     }
-}
-.menu-hamburguer {
-    display: none; 
-    background: none;
-    border: none;
-    cursor: pointer;
-    position: absolute; 
-    top: 35px;
-    right: 20px;
-    z-index: 1001; 
 }

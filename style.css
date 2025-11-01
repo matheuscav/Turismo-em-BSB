@@ -29,6 +29,10 @@ body {
     border-bottom: 4px solid var(--cor-destaque);
 }
 .menu {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
     padding: 10px 0;
 }
 .menu a {
@@ -211,14 +215,10 @@ body {
         width: 70%;
         height: 100vh;
         background-color: var(--cor-principal);
-        
-        /* --- A MÁGICA ESTÁ AQUI --- */
-        display: flex; /* Garante que é um container flex */
-        flex-direction: column; /* FORÇA os itens a ficarem em coluna */
-        justify-content: center; /* Centraliza a coluna verticalmente */
-        align-items: center; /* Centraliza os itens na horizontal */
-        /* --- FIM DA CORREÇÃO --- */
-
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
         gap: 20px;
         transition: transform 0.3s ease-in-out;
         transform: translateX(-100%);

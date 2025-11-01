@@ -22,7 +22,6 @@ body {
     align-items: center;
     justify-content: center;
     position: relative;
-    text-transform: uppercase;
     padding: 20px;
     background-color: var(--cor-principal);
     color: #fff;
@@ -95,7 +94,6 @@ body {
     border: none;
     border-radius: 5px;
     font-size: 18px;
-    text-transform: uppercase;
     text-decoration: none;
     font-weight: bold;
     cursor: pointer;
@@ -182,7 +180,6 @@ body {
     border: none;
     border-radius: 5px;
     font-size: 18px;
-    text-transform: uppercase;
     cursor: pointer;
 }
 .formulario button:hover {
